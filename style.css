@@ -1,0 +1,83 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background: #dadada;
+    display: flex;
+    align-items: center;
+}
+.wrapper {
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.image{
+    width: 22%;
+    height: 200px;
+    overflow: hidden;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.25s;
+}
+
+.wrapper img:hover{
+    transform: scale(1.2);
+}
+
+.gallery{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.7);
+    transition: 0.5s;
+}
+
+.close{
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    font-size: 35px;
+    cursor: pointer;
+}
+.control{
+    position: absolute;
+    font-size: 50px;
+    cursor: pointer;
+}
+.prev{
+    left: 15px;
+}
+.next{
+    right: 15px;
+}
+.gallery--inner{
+    margin: 0 auto;
+}
+
+.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.hide{
+    display: none;
+}
